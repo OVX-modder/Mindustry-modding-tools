@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mindustry Mod Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="key-gate.css">
+</head>
+<body>
+
+<div id="overlay" onclick="toggleMenu()"></div>
+
+<div id="sidebar">
+  <a onclick="showSection('home')" id="nav-home" class="active">🏠 Home</a>
+  <a onclick="showSection('modInfo')" id="nav-modInfo">📄 Mod Info</a>
+  <a onclick="showSection('item')" id="nav-item">📦 Add Item</a>
+  <a onclick="showSection('liquid')" id="nav-liquid">💧 Add Liquid</a>
+  <a onclick="showSection('wall')" id="nav-wall">🧱 Add Wall</a>
+  <a onclick="showSection('power')" id="nav-power">⚡ Add Power</a>
+  <a onclick="showSection('turret')" id="nav-turret">🔫 Add Turret</a>
+  <a onclick="showSection('drill')" id="nav-drill">⛏️ Add Drill</a>
+  <a onclick="showSection('crafter')" id="nav-crafter">🏭 Add Crafter</a>
+  <a onclick="showSection('unit')" id="nav-unit">🤖 Add Unit</a>
+  <a onclick="showSection('export')" id="nav-export">📤 Export Mod</a>
+</div>
+
+<div id="topbar">
+  <button onclick="toggleMenu()">☰</button>
+  <h1>Mindustry Mod Builder</h1>
+</div>
+
+<div id="main">
+
+  <div id="section-home" class="section active">
+    <h2>Welcome 👋</h2>
+    <p>Build your Mindustry mod. Fill in the sections, then export a ready-to-use <code>.zip</code> file.</p>
+    <h3>How to install in Mindustry</h3>
+    <ol>
+      <li>Open Mindustry.</li>
+      <li>Go to <b>Play → Mods → Import Mod</b>.</li>
+      <li>Pick the <code>.zip</code> file from your Downloads.</li>
+      <li>Enable the mod in the list and restart the game.</li>
+    </ol>
+  </div>
+
+  <div id="section-modInfo" class="section">
+    <h2>Mod Info</h2>
+    <label data-help="Lowercase, no spaces. Only a-z, 0-9, and hyphens.">Internal Name</label>
+    <input type="text" id="modName" placeholder="my-awesome-mod">
+    <label data-help="The name shown in the mod list.">Display Name</label>
+    <input type="text" id="modDisplayName" placeholder="My Awesome Mod">
+    <label data-help="Your name or username.">Author</label>
+    <input type="text" id="modAuthor" placeholder="Your Name">
+    <label data-help="A short description of your mod.">Description</label>
+    <textarea id="modDescription" placeholder="A cool mod..."></textarea>
+    <label data-help="Version number. Example: 1.0">Version</label>
+    <input type="text" id="modVersion" value="1.0">
+  </div>
+
+</div>
+
+<script src="section-item.js"></script>
+<script src="section-liquid.js"></script>
+<script src="section-wall.js"></script>
+<script src="section-power.js"></script>
+<script src="section-turret.js"></script>
+<script src="section-drill.js"></script>
+<script src="section-crafter.js"></script>
+<script src="section-unit.js"></script>
+<script src="section-export.js"></script>
+<script src="app.js"></script>
+<script src="drawer.js"></script>
+<script src="drawer-preview.js"></script>
+<script src="key-gate.js"></script>
+</body>
+</html>
